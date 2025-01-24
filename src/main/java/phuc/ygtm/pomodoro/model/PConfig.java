@@ -15,7 +15,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -41,6 +40,6 @@ public class PConfig {
     private int sessionsBeforeLongBreak;
 
     @Enumerated(EnumType.STRING) // Store enum values as strings in the database
-    @Column(name = "notification", nullable = false)
-    private NotificationType notification;
+    @Column(name = "p_notification", nullable = false)
+    private PNotificationType pNotification;
 }

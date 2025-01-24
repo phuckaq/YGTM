@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import phuc.ygtm.pomodoro.dto.PSessionDto;
 import phuc.ygtm.pomodoro.mapper.PSessionMapper;
-import phuc.ygtm.pomodoro.model.Duration;
+import phuc.ygtm.pomodoro.model.PDuration;
 import phuc.ygtm.pomodoro.model.PSession;
 import phuc.ygtm.pomodoro.repo.PSessionRepo;
 import phuc.ygtm.pomodoro.service.PSessionService;
@@ -32,11 +32,11 @@ public class PSessionServiceImpl implements PSessionService {
     public PSessionDto createSession(PSessionDto dto) {
         PSession session = PSessionMapper.INSTANCE.toEntity(dto);
 
-        if (session.getDuration() == null) {
-            session.setDuration(Duration.TWENTY_FIVE);
+        if (session.getPDuration() == null) {
+            session.setPDuration(PDuration.TWENTY_FIVE);
         }
 
-        session.setEndTime(session.getStartTime().plusMinutes(session.getDuration().toMinutes()));
+        session.setEndTime(session.getStartTime().plusMinutes(session.getPDuration().toMinutes()));
         PSession savedSession = sessionRepository.save(session);
 
         return PSessionMapper.INSTANCE.toDTO(savedSession);
@@ -48,10 +48,10 @@ public class PSessionServiceImpl implements PSessionService {
                 .orElseThrow(() -> new IllegalArgumentException("Session not found with id: " + dto.getId()));
 
         existingSession.setStartTime(dto.getStartTime());
-        existingSession.setDuration(dto.getDuration());
-        existingSession.setEndTime(dto.getStartTime().plusMinutes(dto.getDuration().toMinutes()));
-        existingSession.setStatus(dto.getStatus());
-        existingSession.setType(dto.getType());
+        existingSession.setPDuration(dto.getPDuration());
+        existingSession.setEndTime(dto.getStartTime().plusMinutes(dto.getPDuration().toMinutes()));
+        existingSession.setPStatus(dto.getPStatus());
+        existingSession.setPType(dto.getPType());
 
         PSession updatedSession = sessionRepository.save(existingSession);
         return PSessionMapper.INSTANCE.toDTO(updatedSession);

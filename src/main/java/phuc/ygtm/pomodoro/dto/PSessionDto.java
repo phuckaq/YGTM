@@ -5,9 +5,9 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import phuc.ygtm.pomodoro.model.Duration;
-import phuc.ygtm.pomodoro.model.Status;
-import phuc.ygtm.pomodoro.model.Type;
+import phuc.ygtm.pomodoro.model.PDuration;
+import phuc.ygtm.pomodoro.model.PStatus;
+import phuc.ygtm.pomodoro.model.PType;
 
 import java.time.LocalDateTime;
 
@@ -21,7 +21,7 @@ public class PSessionDto {
     private Long id;
     private LocalDateTime startTime;
     private LocalDateTime endTime;
-    private Type type;
-    private Status status;
-    private Duration duration;
+    private PType PType;
+    private PStatus PStatus;
+    private PDuration PDuration;
 }

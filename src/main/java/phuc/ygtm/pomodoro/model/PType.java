@@ -1,5 +1,5 @@
 package phuc.ygtm.pomodoro.model;
 
-public enum Type {
+public enum PType {
     WORK,BREAK
 }

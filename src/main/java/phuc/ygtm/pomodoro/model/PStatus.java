@@ -1,5 +1,5 @@
 package phuc.ygtm.pomodoro.model;
 
-public enum Status {
+public enum PStatus {
     ABANDONED,COMPLETED,IN_PROGRESS,STOPPED
 }

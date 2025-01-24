@@ -2,12 +2,11 @@ package phuc.ygtm.pomodoro.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import phuc.ygtm.pomodoro.model.NotificationType;
+import phuc.ygtm.pomodoro.model.PNotificationType;
 
 @Getter
 @Setter
@@ -21,5 +20,5 @@ public class PConfigDto {
     private int workSessionLength;
     private int breakSessionLength;
     private int sessionsBeforeLongBreak;
-    private NotificationType notification;
+    private PNotificationType notification;
 }

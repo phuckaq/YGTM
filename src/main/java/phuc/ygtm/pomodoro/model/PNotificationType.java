@@ -1,5 +1,6 @@
 package phuc.ygtm.pomodoro.model;
 
-public enum NotificationType {
+public enum
+PNotificationType {
     SOUND, POPUP, NONE
 }

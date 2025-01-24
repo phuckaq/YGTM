@@ -1,6 +1,6 @@
 package phuc.ygtm.pomodoro.model;
 
-public enum Duration {
+public enum PDuration {
     TWENTY,TWENTY_FIVE,THIRTY;
 
     public int toMinutes() {
