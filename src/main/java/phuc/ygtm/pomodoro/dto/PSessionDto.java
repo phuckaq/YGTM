@@ -2,15 +2,17 @@ package phuc.ygtm.pomodoro.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import phuc.ygtm.pomodoro.model.Duration;
 import phuc.ygtm.pomodoro.model.Status;
 import phuc.ygtm.pomodoro.model.Type;
 
 import java.time.LocalDateTime;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
