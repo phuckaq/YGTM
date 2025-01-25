@@ -30,16 +30,19 @@ public class PConfig {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "work_session_length", nullable = false)
-    private int workSessionLength;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "p_duration_work", nullable = false)
+    private PDurationWork pDurationWork;
 
-    @Column(name = "break_session_length", nullable = false)
-    private int breakSessionLength;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "p_duration_break", nullable = false)
+    private PDurationBreak pDurationBreak;
 
-    @Column(name = "sessions_before_long_break", nullable = false)
-    private int sessionsBeforeLongBreak;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "p_duration_after_sessions", nullable = false)
+    private PDurationAfterSessions pDurationAfterSessions;
 
-    @Enumerated(EnumType.STRING) // Store enum values as strings in the database
-    @Column(name = "p_notification", nullable = false)
-    private PNotificationType pNotification;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "p_notification_tyoe", nullable = false)
+    private PNotificationType pNotificationType;
 }

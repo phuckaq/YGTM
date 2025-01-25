@@ -5,7 +5,8 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import phuc.ygtm.pomodoro.model.PDuration;
+import phuc.ygtm.pomodoro.model.PDurationBreak;
+import phuc.ygtm.pomodoro.model.PDurationWork;
 import phuc.ygtm.pomodoro.model.PStatus;
 import phuc.ygtm.pomodoro.model.PType;
 
@@ -23,5 +24,6 @@ public class PSessionDto {
     private LocalDateTime endTime;
     private PType PType;
     private PStatus PStatus;
-    private PDuration PDuration;
+    private PDurationWork PDurationWork;
+    private PDurationBreak pDurationBreak;
 }

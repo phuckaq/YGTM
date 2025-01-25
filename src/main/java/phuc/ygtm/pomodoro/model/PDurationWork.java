@@ -1,7 +1,7 @@
 package phuc.ygtm.pomodoro.model;
 
-public enum PDuration {
-    TWENTY,TWENTY_FIVE,THIRTY;
+public enum PDurationWork {
+    TWENTY, TWENTY_FIVE, THIRTY;
 
     public int toMinutes() {
         switch (this) {

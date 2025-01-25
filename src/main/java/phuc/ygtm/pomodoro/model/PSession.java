@@ -45,7 +45,10 @@ public class PSession {
     private PStatus PStatus;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "p_duration", nullable = false)
-    private PDuration PDuration;
+    @Column(name = "p_duration_work")
+    private PDurationWork PDurationWork;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "p_duration_break")
+    private PDurationBreak pDurationBreak;
 }
