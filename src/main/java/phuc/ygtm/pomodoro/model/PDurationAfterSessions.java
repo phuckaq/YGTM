@@ -1,18 +1,25 @@
 package phuc.ygtm.pomodoro.model;
 
-public enum PDurationAfterSessions {
-    TWO, THREE, FOUR;
+import lombok.Getter;
 
-    public int toMinutes() {
-        switch (this) {
-            case TWO:
-                return 2;
-            case THREE:
-                return 3;
-            case FOUR:
-                return 4;
-            default:
-                throw new IllegalArgumentException("Unknown duration: " + this);
+@Getter
+public enum PDurationAfterSessions {
+    TWO(2),
+    THREE(3),
+    FOUR(4);
+
+    private final int value;
+
+    PDurationAfterSessions(int value) {
+        this.value = value;
+    }
+
+    public static PDurationAfterSessions fromValue(int value) {
+        for (PDurationAfterSessions duration : PDurationAfterSessions.values()) {
+            if (duration.getValue() == value) {
+                return duration;
+            }
         }
+        throw new IllegalArgumentException("Invalid PDurationAfterSessions value: " + value);
     }
 }

@@ -31,18 +31,18 @@ public class PConfig {
     private Long id;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "p_duration_work", nullable = false)
-    private PDurationWork pDurationWork;
+    @Column(name = "duration_work", nullable = false)
+    private PDurationWork durationWork;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "p_duration_break", nullable = false)
-    private PDurationBreak pDurationBreak;
+    @Column(name = "duration_break", nullable = false)
+    private PDurationBreak durationBreak;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "p_duration_after_sessions", nullable = false)
-    private PDurationAfterSessions pDurationAfterSessions;
+    @Column(name = "duration_after_sessions", nullable = false)
+    private PDurationAfterSessions durationAfterSessions;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "p_notification_tyoe", nullable = false)
-    private PNotificationType pNotificationType;
+    @Column(name = "notification_type", nullable = false)
+    private PNotificationType notificationType;
 }

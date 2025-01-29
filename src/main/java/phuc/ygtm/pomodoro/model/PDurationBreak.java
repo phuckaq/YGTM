@@ -1,16 +1,23 @@
 package phuc.ygtm.pomodoro.model;
 
-public enum PDurationBreak {
-    FIVE, TEN;
+import lombok.Getter;
 
-    public int toMinutes() {
-        switch (this) {
-            case FIVE:
-                return 5;
-            case TEN:
-                return 10;
-            default:
-                throw new IllegalArgumentException("Unknown duration: " + this);
+@Getter
+public enum PDurationBreak {
+    FIVE(5),
+    TEN(10);
+
+    private final int value;
+
+    PDurationBreak(int value) {
+        this.value = value;
+    }
+    public static PDurationBreak fromValue(int value) {
+        for (PDurationBreak duration : PDurationBreak.values()) {
+            if (duration.getValue() == value) {
+                return duration;
+            }
         }
+        throw new IllegalArgumentException("Invalid PDurationBreak value: " + value);
     }
 }

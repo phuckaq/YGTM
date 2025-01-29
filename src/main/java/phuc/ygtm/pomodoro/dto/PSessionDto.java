@@ -22,8 +22,8 @@ public class PSessionDto {
     private Long id;
     private LocalDateTime startTime;
     private LocalDateTime endTime;
-    private PType PType;
-    private PStatus PStatus;
-    private PDurationWork PDurationWork;
-    private PDurationBreak pDurationBreak;
+    private PType type;
+    private PStatus status;
+    private PDurationWork durationWork;
+    private PDurationBreak durationBreak;
 }

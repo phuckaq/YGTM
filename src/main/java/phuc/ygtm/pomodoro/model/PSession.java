@@ -37,18 +37,18 @@ public class PSession {
     private LocalDateTime endTime;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "p_type", nullable = false)
-    private PType PType;
+    @Column(name = "type", nullable = false)
+    private PType type;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "p_status", nullable = false)
-    private PStatus PStatus;
+    @Column(name = "status", nullable = false)
+    private PStatus status;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "p_duration_work")
-    private PDurationWork PDurationWork;
+    @Column(name = "duration_work")
+    private PDurationWork durationWork;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "p_duration_break")
-    private PDurationBreak pDurationBreak;
+    @Column(name = "duration_break")
+    private PDurationBreak durationBreak;
 }

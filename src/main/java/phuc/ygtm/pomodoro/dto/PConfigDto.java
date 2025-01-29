@@ -6,9 +6,6 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import phuc.ygtm.pomodoro.model.PDurationAfterSessions;
-import phuc.ygtm.pomodoro.model.PDurationBreak;
-import phuc.ygtm.pomodoro.model.PDurationWork;
 import phuc.ygtm.pomodoro.model.PNotificationType;
 
 @Getter
@@ -20,8 +17,8 @@ import phuc.ygtm.pomodoro.model.PNotificationType;
 public class PConfigDto {
 
     private Long id;
-    private PDurationWork pDurationWork;
-    private PDurationBreak pDurationBreak;
-    private PDurationAfterSessions pDurationAfterSessions;
-    private PNotificationType pNotificationType;
+    private Integer durationWork;
+    private Integer durationBreak;
+    private Integer durationAfterSessions;
+    private PNotificationType notificationType;
 }

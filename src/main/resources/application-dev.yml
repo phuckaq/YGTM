@@ -13,3 +13,7 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 server:
   port: 8080
+
+client:
+  allow:
+    api: "http://localhost:5173"

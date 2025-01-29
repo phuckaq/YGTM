@@ -1,18 +1,25 @@
 package phuc.ygtm.pomodoro.model;
 
-public enum PDurationWork {
-    TWENTY, TWENTY_FIVE, THIRTY;
+import lombok.Getter;
 
-    public int toMinutes() {
-        switch (this) {
-            case TWENTY:
-                return 20;
-            case TWENTY_FIVE:
-                return 25;
-            case THIRTY:
-                return 30;
-            default:
-                throw new IllegalArgumentException("Unknown duration: " + this);
+@Getter
+public enum PDurationWork {
+    TWENTY(20),
+    TWENTY_FIVE(25),
+    THIRTY(30);
+
+    private final int value;
+
+    PDurationWork(int value) {
+        this.value = value;
+    }
+
+    public static PDurationWork fromValue(int value) {
+        for (PDurationWork duration : PDurationWork.values()) {
+            if (duration.getValue() == value) {
+                return duration;
+            }
         }
+        throw new IllegalArgumentException("Invalid PDurationWork value: " + value);
     }
 }
